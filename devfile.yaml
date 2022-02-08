@@ -3,8 +3,12 @@ metadata:
   name: che-code
 attributes:
   che-editor.yaml: |
-    id: che-incubator/che-code/insiders
-    name: che-code-editor
+    # EXAMPLE 1 - registry reference
+    id: eclipse/che-theia/nigthly         # mandatory
+    override:                             # optional
+      containers:
+        - name: theia-ide
+          memoryLimit: 1280Mi
 components:
   - name: dev
     container:
