@@ -4,6 +4,7 @@ metadata:
 attributes:
   che-editor.yaml: |
     id: che-incubator/che-code/insiders
+    name: che-code-editor
 components:
   - name: dev
     container:
