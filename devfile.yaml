@@ -1,0 +1,40 @@
+schemaVersion: 2.1.0
+metadata:
+  name: che-code
+  attributes:
+    che-editor.yaml:
+      id: che-incubator/che-code/insiders
+components:
+  - name: dev
+    container:
+      image: quay.io/che-incubator/che-code-dev:insiders
+      memoryLimit: 7Gi
+      cpuLimit: 3500m
+      endpoints:
+        - exposure: public
+          name: dev
+          secure: true
+          protocol: http
+          targetPort: 8000
+  - name: projects
+    volume:
+      size: 3Gi
+commands:
+  - id: build
+    exec:
+      component: dev
+      workingDir: ${PROJECTS_ROOT}/che-code
+      commandLine: |
+        yarn watch
+      group:
+        kind: build
+        isDefault: true
+  - id: run
+    exec:
+      component: dev
+      workingDir: ${PROJECTS_ROOT}/che-code
+      commandLine: |
+        yarn server
+      group:
+        kind: run
+        isDefault: true
