@@ -2,6 +2,5 @@ schemaVersion: 2.1.0
 metadata:
   generateName: pycharm
 attributes:
-  che-editor.yaml: |
-    inline:
+  che-editor.yaml:
     id: che-incubator/che-pycharm/latest
