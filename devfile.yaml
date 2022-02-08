@@ -1,7 +1,7 @@
 schemaVersion: 2.1.0
 metadata:
-  generateName: che-code123
+  generateName: pycharm
 attributes:
   che-editor.yaml: |
     inline:
-    id: eclipse/che-theia/next
+    id: che-incubator/che-pycharm/latest
