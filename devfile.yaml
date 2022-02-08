@@ -1,9 +1,9 @@
 schemaVersion: 2.1.0
 metadata:
   name: che-code
-  attributes:
-    che-editor.yaml:
-      id: che-incubator/che-code/insiders
+attributes:
+  che-editor.yaml: |
+    id: che-incubator/che-code/insiders
 components:
   - name: dev
     container:
